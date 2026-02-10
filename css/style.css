@@ -1,0 +1,62 @@
+*{
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f3faf6;
+}
+
+/* Top Bar */
+.topbar{
+  background:#1f8f5f;
+  color:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Layout */
+.layout{
+  display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+  width:220px;
+  background:#e6f4ed;
+  min-height:100vh;
+  padding:20px;
+}
+
+.sidebar a{
+  display:block;
+  padding:12px;
+  margin-bottom:10px;
+  color:#1f8f5f;
+  text-decoration:none;
+  border-radius:6px;
+  background:white;
+}
+
+/* Content */
+.content{
+  flex:1;
+  padding:30px;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../css/style.css">
+
+<div class="topbar">Collector Dashboard</div>
+
+<div class="layout">
+
+<div class="sidebar">
+  <a href="dashboard.html">Live Map</a>
+</div>
+
+<div class="content">
+  <h3>Live Vehicle Location</h3>
+  <div id="map" style="height:400px"></div>
+</div>
+
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+var map = L.map('map').setView([10.8505, 76.2711], 10); // Kerala
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+var marker = L.marker([10.85,76.27]).addTo(map);
+
+setInterval(()=>{
+  let lat = 10.85 + Math.random()/100;
+  let lng = 76.27 + Math.random()/100;
+  marker.setLatLng([lat,lng]);
+},2000);
+</script>
